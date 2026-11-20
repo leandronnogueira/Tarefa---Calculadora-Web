@@ -1,0 +1,88 @@
+body {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 10px;
+}
+
+.calculadora {
+    max-width: 340px;
+    margin: 40px auto;
+}
+
+.tela {
+    text-align: right;
+    color: white;
+    padding: 10px 15px;
+}
+
+#conta {
+    font-size: 18px;
+    color: #a5a5a5;
+    height: 22px;
+}
+
+#visor {
+    font-size: 64px;
+    font-weight: 300;
+    word-break: break-all;
+}
+
+#visor.pequeno {
+    font-size: 40px;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    background-color: #333333;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn:active {
+    opacity: 0.7;
+}
+
+.dois {
+    grid-column: span 2;
+    aspect-ratio: auto;
+    border-radius: 50px;
+}
+
+.op, .igual {
+    background-color: #ff9f0a;
+    font-size: 36px;
+}
+
+.limpar, .cinza {
+    background-color: #a5a5a5;
+    color: black;
+}
+
+.btn[data-num="0"] {
+    text-align: left;
+    padding-left: 32px;
+}
+
+@media (max-width: 400px) {
+    .calculadora {
+        margin-top: 20px;
+    }
+
+    .btn {
+        font-size: 26px;
+    }
+
+    #visor {
+        font-size: 52px;
+    }
+}
